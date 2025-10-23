@@ -17,6 +17,7 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script_stop: true
           script: |
+            sudo chown -R ubuntu:ubuntu /home/ubuntu/github-actions-practice
             cd /home/ubuntu/github-actions-practice
             git config --global --add safe.directory /home/ubuntu/github-actions-practice
             git pull origin main
